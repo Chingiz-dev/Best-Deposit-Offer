@@ -2,20 +2,19 @@ body {
     font-family:'Noto Sans JP', sans-serif;
 }
 
-main {background-color: green;
+main {
     margin: auto;
     max-width: 1100px;
     min-width: 470px;
 }
 
-header {background-color: deepskyblue;
+header {
     max-width: 90%;
     margin: auto;
     text-align: center;
 }
 
 #user-input {
-    background-color: whitesmoke;
     width: 80%;
     margin: auto;
     padding: 20px;

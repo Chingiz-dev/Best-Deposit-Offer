@@ -39,7 +39,7 @@
                 <section>
                     <div class="text">Валюта вклада</div>
                     <div>
-                        <select>
+                        <select id="currency">
                             <option value="currencyRUR" id="RUB">RUB</option>
                             <option value="currencyUSD" id="USD">USD</option>
                         </select>
@@ -50,10 +50,9 @@
             </div>
             <button id="start-calculate-button">Подобрать</button>
         </div>
-        <div id="output-container">
-
-        </div>
+        <div id="output-container"></div>
     </main>
+    <script src="db.js" id="dbjs"></script>
     <script src="main.js"></script>
 </body>
 
