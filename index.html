@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Чингиз М2_2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Подбор оптимального вклада</h1>
+        </header>
+        <div id="user-input">
+            <div>
+                <section>
+                    <div class="text">Начальная сумма</div>
+                    <div>
+                        <input type="number" class="prompt" id="input-start-amount" placeholder="Начальная сумма" />
+                    </div>
+                </section>
+
+                <section>
+                    <div class="text">Сумма ежемесячного пополнения</div>
+                    <div>
+                        <input type="number" class="prompt" id="input-additional" placeholder="Сумма пополнения" />
+                    </div>
+                </section>
+
+                <section>
+                    <div class="text">Срок вклада</div>
+                    <div>
+                        <input type="number" class="prompt" id="input-months" placeholder="Сроки вклада" />
+                    </div>
+                </section>
+
+                <section>
+                    <div class="text">Валюта вклада</div>
+                    <div>
+                        <select>
+                            <option value="currencyRUR" id="RUB">RUB</option>
+                            <option value="currencyUSD" id="USD">USD</option>
+                        </select>
+                    </div>
+                    <!-- <input type="" id="input-currency" placeholder="Валюта вклада" /> -->
+
+                </section>
+            </div>
+            <button id="start-calculate-button">Подобрать</button>
+        </div>
+        <div id="output-container">
+
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
