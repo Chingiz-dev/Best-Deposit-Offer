@@ -70,14 +70,6 @@ tr {
     border: 1px solid #cccccc;
 }
 
-tr.active {
-    cursor: pointer;
-}
-
-tr.active:hover {
-    background: #c9c9c9;
-}
-
 th {
     background-color: gainsboro;
 }
