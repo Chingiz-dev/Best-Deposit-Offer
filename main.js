@@ -68,7 +68,7 @@ class Calculator { //converts DB.js output array and deposit array into applicat
 
 class Application { //collecting data from input, send to classes for calculation, send output to DOM.
   constructor() {
-    buttonHTML.addEventListener("click", this.runApplication);
+    buttonHTML.addEventListener('click', this.runApplication);
   }
   runApplication() {
     const startAmount = +startAmountHTML.value;
