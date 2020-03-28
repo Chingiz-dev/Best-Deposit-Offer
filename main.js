@@ -66,11 +66,11 @@ class Calculator { //converts DB.js output array and deposit array into applicat
   }
 }
 
-class Application { //collecting data from input, handling it to classes for calculation, send's output to DOM.
+class Application { //collecting data from input, send to classes for calculation, send output to DOM.
   constructor() {
-    buttonHTML.addEventListener("click", this.validateInput);
+    buttonHTML.addEventListener("click", this.runApplication);
   }
-  validateInput() {
+  runApplication() {
     const startAmount = +startAmountHTML.value;
     const additional = +additionalHTML.value;
     const months = +monthsHTML.value;
@@ -94,6 +94,7 @@ class Application { //collecting data from input, handling it to classes for cal
     let final = new Calculator(bankproduct, deposit);
     if (final.length === 0) {
       containerHTML.innerHTML = 'Нет подходящих вариантов';
+      return;
     } else {
       let outputArray = [];
       outputArray[0] = `<tr><th>Название банка</th><th>Вклад</th><th>Процент</th><th>Итоговая сумма</th></tr>`;
@@ -101,6 +102,7 @@ class Application { //collecting data from input, handling it to classes for cal
         outputArray.push(`<tr><td>${final[i].bankName}</td><td>${final[i].investName}</td><td>${final[i].incomeType}</td><td>${final[i].totalAmount}</td></tr>`);
       }
       containerHTML.innerHTML = `<table>${outputArray.join('')}</table>`;
+      return;
     }
   }
 }
