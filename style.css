@@ -22,7 +22,7 @@ header {
     border-radius: 5px;
 }
 
-section {
+.input-row {
     display: flex;
     justify-content: space-between;
     margin: 5px 0px;
