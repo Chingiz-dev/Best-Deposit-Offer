@@ -88,7 +88,6 @@ class Application { //collecting data from input, send to classes for calculatio
       alert('Срок вклада должен быть целым числом');
       return;
     }
-
     let deposit = new Deposit(startAmount, additional, months, currency);
     let bankproduct = new BankProduct(deposit);
     let final = new Calculator(bankproduct, deposit);
