@@ -76,7 +76,7 @@ class Application { //collecting data from input, send to classes for calculatio
     const months = +monthsHTML.value;
     const currency = currencyHTML.value;
 
-    if (!startAmount) {
+    if (!startAmount || startAmount <0) {
       alert('Начальная сумма должна быть положительным числом');
       return;
     }
