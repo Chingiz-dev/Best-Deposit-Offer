@@ -58,6 +58,7 @@ class Calculator { //converts DB.js output array and deposit array into applicat
     }
     return outputArray;
   }
+
   getFinalAmount(startAmount, additional, percent, month) {
     for (let i = 0; i < month; i++) {
       startAmount = startAmount * percent / 1200 + startAmount + additional;
@@ -70,6 +71,7 @@ class Application { //collecting data from input, send to classes for calculatio
   constructor() {
     buttonHTML.addEventListener('click', this.runApplication);
   }
+
   runApplication() {
     const startAmount = +startAmountHTML.value;
     const additional = +additionalHTML.value;
@@ -83,11 +85,12 @@ class Application { //collecting data from input, send to classes for calculatio
     if (additional < 0) {
       alert('Сумма пополнения должна быть не меньше нуля');
       return;
-    }
+    }    
     if (!months || months < 0 || !(months % 2 === 0 || months % 2 === 1)) {
       alert('Срок вклада должен быть целым числом');
       return;
     }
+    
     let deposit = new Deposit(startAmount, additional, months, currency);
     let bankproduct = new BankProduct(deposit);
     let final = new Calculator(bankproduct, deposit);
