@@ -84,7 +84,7 @@ class Application { //collecting data from input, send to classes for calculatio
       alert('Сумма пополнения должна быть не меньше нуля');
       return;
     }
-    if (!months || !(months % 2 === 0 || months % 2 === 1)) {
+    if (!months || months < 0 || !(months % 2 === 0 || months % 2 === 1)) {
       alert('Срок вклада должен быть целым числом');
       return;
     }
